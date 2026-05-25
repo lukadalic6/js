@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Test vježba</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #f8f9fa;
+            color: #212529;
+        }
+        h1 {
+            font-size: 1.5rem;
+            color: #343a40;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .blok {
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .blok h2 {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #6c757d;
+            margin-bottom: 0.75rem;
+        }
+        .rezultat {
+            font-size: 0.95rem;
+            color: #495057;
+            min-height: 1.4em;
+        }
+        .rezultat:empty::before {
+            content: "čeka na rješenje...";
+            color: #adb5bd;
+            font-style: italic;
+        }
+        .lista-rezultat {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .lista-rezultat li {
+            padding: 4px 0;
+            border-bottom: 1px solid #f1f3f5;
+            font-size: 0.9rem;
+            color: #495057;
+        }
+        .lista-rezultat li:last-child { border-bottom: none; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript — Test vježba</h1>
+
+    <!-- ZADATAK 1 + 2 -->
+    <div class="blok">
+        <h2>Zadatak 1 + 2 — Varijable i DOM</h2>
+        <p class="rezultat" id="z1-ime"></p>
+        <p class="rezultat" id="z1-info"></p>
+        <p class="rezultat" id="z1-tip-ime"></p>
+        <p class="rezultat" id="z1-tip-godine"></p>
+        <p class="rezultat" id="z1-tip-aktivan"></p>
+    </div>
+
+    <!-- ZADATAK 3 -->
+    <div class="grid-2">
+        <div class="blok">
+            <h2>Zadatak 3a — Ocjena</h2>
+            <p class="rezultat" id="z3-ocjena"></p>
+        </div>
+        <div class="blok">
+            <h2>Zadatak 3b — Doba dana</h2>
+            <p class="rezultat" id="z3-doba"></p>
+        </div>
+    </div>
+
+    <!-- ZADATAK 4 -->
+    <div class="blok">
+        <h2>Zadatak 4 — Logički operatori</h2>
+        <p class="rezultat" id="z4-a"></p>
+        <p class="rezultat" id="z4-b"></p>
+        <p class="rezultat" id="z4-c"></p>
+    </div>
+
+    <!-- ZADATAK 5 -->
+    <div class="grid-2">
+        <div class="blok">
+            <h2>Zadatak 5a — Ternary</h2>
+            <p class="rezultat" id="z5-dostava"></p>
+        </div>
+        <div class="blok">
+            <h2>Zadatak 5b — Ternary</h2>
+            <p class="rezultat" id="z5-greeting"></p>
+        </div>
+    </div>
+
+    <!-- ZADATAK 6 -->
+    <div class="blok">
+        <h2>Zadatak 6 — Nizovi</h2>
+        <p class="rezultat" id="z6-prvi"></p>
+        <p class="rezultat" id="z6-zadnji"></p>
+        <p class="rezultat" id="z6-duljina"></p>
+        <p class="rezultat" id="z6-nakon-push"></p>
+    </div>
+
+    <!-- ZADATAK 7 -->
+    <div class="grid-2">
+        <div class="blok">
+            <h2>Zadatak 7a — Popis gradova</h2>
+            <ul class="lista-rezultat" id="z7-gradovi"></ul>
+        </div>
+        <div class="blok">
+            <h2>Zadatak 7b — Prosjek ocjena</h2>
+            <p class="rezultat" id="z7-zbroj"></p>
+            <p class="rezultat" id="z7-prosjek"></p>
+            <p class="rezultat" id="z7-max"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
